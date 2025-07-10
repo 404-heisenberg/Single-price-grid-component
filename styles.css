@@ -1,0 +1,127 @@
+:root {
+  --main-color: hsl(179, 62%, 43%);
+  --secondary-color: hsl(71, 73%, 54%);
+  --bg-color: hsl(204, 43%, 93%);
+  --darker-bg-color: hsl(179, 62%, 40%);
+  --txt-color: hsl(218, 22%, 67%);
+  --font-family: "Karla", sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+  font-size: 1rem;
+  font-family: var(--font-family);
+  display: flex;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* TYPOGRAPHY */
+
+.community h1 {
+  color: var(--main-color);
+}
+
+h2 {
+  font-size: 1.125rem;
+}
+
+.community h2 {
+  color: var(--secondary-color);
+}
+
+.community p {
+  color: var(--txt-color);
+}
+
+.subscription,
+.why-us,
+button {
+  color: white;
+}
+
+/* LAYOUT */
+
+.container {
+  display: grid;
+  width: 70%;
+  margin: 0 auto;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "com"
+    "sub"
+    "why";
+}
+
+@media (min-width: 600px) {
+  .container {
+    grid-template-areas:
+      "com com"
+      "sub why";
+  }
+}
+
+.community,
+.subscription,
+.why-us {
+  padding: 2em;
+}
+
+.community {
+  grid-area: com;
+  background: white;
+}
+
+.subscription {
+  grid-area: sub;
+  background: var(--darker-bg-color);
+}
+
+.subscription p {
+  margin-top: 0.5em;
+}
+
+.pricing {
+  font-weight: 700;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0;
+}
+
+.pricing span {
+  font-size: 1rem;
+  margin-left: 0.25em;
+  vertical-align: 25%;
+  font-weight: 300;
+}
+
+button {
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+  width: 100%;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background: var(--bg-color);
+  color: var(--main-color);
+}
+
+.why-us {
+  background-color: var(--main-color);
+}
+
+.why-us ul {
+  padding-left: 0;
+  font-weight: 300;
+}
+
+.why-us li {
+  list-style: none;
+  margin-bottom: 0.25em;
+}
