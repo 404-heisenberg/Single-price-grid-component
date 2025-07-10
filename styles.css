@@ -2,7 +2,7 @@
   --main-color: hsl(179, 62%, 43%);
   --secondary-color: hsl(71, 73%, 54%);
   --bg-color: hsl(204, 43%, 93%);
-  --darker-bg-color: hsl(179, 62%, 40%);
+  --lighter-bg-color: hsl(179, 62%, 53%);
   --txt-color: hsl(218, 22%, 67%);
   --font-family: "Karla", sans-serif;
 }
@@ -75,7 +75,7 @@ button {
 
 .subscription {
   grid-area: sub;
-  background: var(--darker-bg-color);
+  background: var(--main-color);
 }
 
 .subscription p {
@@ -113,7 +113,7 @@ button:focus {
 }
 
 .why-us {
-  background-color: var(--main-color);
+  background-color: var(--lighter-bg-color);
 }
 
 .why-us ul {
